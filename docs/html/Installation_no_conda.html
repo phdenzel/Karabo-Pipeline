@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Manual Installation (no Conda) &mdash; Karabo-Pipeline 0.1.0 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -68,11 +69,11 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="manual-installation-no-conda">
+  <section id="manual-installation-no-conda">
 <h1>Manual Installation (no Conda)<a class="headerlink" href="#manual-installation-no-conda" title="Permalink to this headline"></a></h1>
 <p>To Install the package on your local system, follow the steps below.
 The installation has been tested on Ubuntu 20.04 (x86_x64) and MacOS (Intel).</p>
-<div class="section" id="dependencies">
+<section id="dependencies">
 <h2>Dependencies<a class="headerlink" href="#dependencies" title="Permalink to this headline"></a></h2>
 <p>Your system should have the following packages dependencies installed</p>
 <ul class="simple">
@@ -87,8 +88,8 @@ The installation has been tested on Ubuntu 20.04 (x86_x64) and MacOS (Intel).</p
 </ul>
 <p>The Pipeline uses the <a class="reference external" href="https://github.com/OxfordSKA/OSKAR">OSKAR</a> and <a class="reference external" href="https://ska-telescope.gitlab.io/external/rascil/index.html">RASCIL</a> packages.
 The Installation procedure of the packages is not straight forward, therefore an installation scripts exist. See below.</p>
-</div>
-<div class="section" id="instructions-linux-ubuntu">
+</section>
+<section id="instructions-linux-ubuntu">
 <h2>Instructions Linux (Ubuntu)<a class="headerlink" href="#instructions-linux-ubuntu" title="Permalink to this headline"></a></h2>
 <ol class="arabic simple">
 <li><p>Install package dependencies</p></li>
@@ -118,8 +119,8 @@ conda activate pipeline_env
 python -m ipykernel install --user --name<span class="o">=</span>pipeline_env
 </pre></div>
 </div>
-</div>
-<div class="section" id="instructions-macos-intel">
+</section>
+<section id="instructions-macos-intel">
 <h2>Instructions MacOS (Intel)<a class="headerlink" href="#instructions-macos-intel" title="Permalink to this headline"></a></h2>
 <p>On MacOS the installation of the dependencies can be installed most easily with <a class="reference external" href="https://brew.sh/">Homebrew</a>.
 The C and C++ compilers and git are installed via the XCode Command Line Tools.</p>
@@ -145,13 +146,13 @@ Then install the python interface.:</p>
 <li><p>Install Rascil</p></li>
 </ol>
 <p>Follow the Mac OS specific <a class="reference external" href="https://ska-telescope.gitlab.io/external/rascil/installation/RASCIL_macos_install.html">instructions</a>.</p>
-</div>
-<div class="section" id="some-remarks">
+</section>
+<section id="some-remarks">
 <h2>Some Remarks<a class="headerlink" href="#some-remarks" title="Permalink to this headline"></a></h2>
 <p>Running under the new Apple Silicon is possible, however requires modification of the OSKAR Source Code or running the x86 binaries emulated.
 If somebody wants to do that, please contact.</p>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
@@ -162,7 +163,7 @@ If somebody wants to do that, please contact.</p>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022, i4ds.
-      <span class="lastupdated">Last updated on Feb 25, 2022.
+      <span class="lastupdated">Last updated on Mar 08, 2022.
       </span></p>
   </div>
 
