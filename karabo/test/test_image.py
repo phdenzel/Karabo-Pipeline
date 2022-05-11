@@ -3,7 +3,6 @@ import unittest
 
 from karabo.Imaging.image import open_fits_image
 from karabo.Imaging.source_detection import detect_sources_in_image
-# from karabo.Imaging.source_detection import  use_dao_star_finder
 from karabo.simulation.Visibility import Visibility
 from karabo.util.jupyter import setup_jupyter_env
 
@@ -27,7 +26,7 @@ class TestImage(unittest.TestCase):
     def test_dirty_image(self):
         setup_jupyter_env()
         vis = Visibility()
-        vis.load_ms_file("karabo/test/data/visibilities_gleam.ms")
+        vis.load_ms_file("data/visibilities_gleam.ms")
         imager = Imager(vis, imaging_npixel=2048,
                         imaging_cellsize=3.878509448876288e-05)
 
@@ -58,12 +57,13 @@ class TestImage(unittest.TestCase):
     #     print(result)
 
     def test_source_detection(self):
-        restored = open_fits_image("karabo/test/data/restored.fits")
+        restored = open_fits_image("./data/restored.fits")
         detection_result = detect_sources_in_image(restored)
         residual = detection_result.get_gaussian_residual_image()
         residual.save_as_fits("result/gaus_residual.fits")
         residual.plot()
         detection_result.detection.show_fit()
+        print(detection_result.sources)
 
     # def test_source_detection_on_residual(self):
     #     residual = open_fits_image("./data/residual.fits")
