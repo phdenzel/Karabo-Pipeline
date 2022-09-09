@@ -8,7 +8,7 @@
             "name": "Python: Test Pinocchio",
             "type": "python",
             "request": "launch",
-            "program": "${workspaceFolder}/karabo/test/test_pinocchio.py",
+            "program": "${workspaceFolder}/karabo/binary_reader.py",
             "console": "integratedTerminal",
             "justMyCode": true,
             "env": {"PYTHONPATH": "${workspaceFolder}"}
