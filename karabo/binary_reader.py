@@ -1,9 +1,9 @@
 from __future__ import annotations
 from ctypes import c_char, c_char_p, c_uint8, c_uint32, c_uint64, LittleEndianStructure
-import string
 import struct
 import sys
 import typing as tp
+import mmap
 import crc32c
 
 class PackedBinaryStructure(LittleEndianStructure):
@@ -183,25 +183,30 @@ class OskarBinaryReader:
         
     def readBinaryFile(self, path : str): # -> TBD:
         print(f"open {path} as oskar binary file")  
+
+        buff: mmap
+
+        with open(path, mode="r+b") as f:
+            buff = mmap.mmap(f.fileno(), 0, access=mmap.ACCESS_WRITE)
+
+        # data = f.read(OskarBinaryReader.HEADER_SIZE)
+        # header = FileHeader.create_from_bytes(data)
         
-        with open(path, mode="rb") as f:
+        header1 = FileHeader.from_buffer(buff[0:OskarBinaryReader.HEADER_SIZE])
 
-            data = f.read(OskarBinaryReader.HEADER_SIZE)
-            header = FileHeader.create_from_bytes(data)
-            
-            rawTag = f.read(OskarBinaryReader.TAG_SIZE)
-            tag = Tag.create_from_bytes(rawTag)
-            rawPayload = f.read(tag.payloadSize)
+        # rawTag = f.read(OskarBinaryReader.TAG_SIZE)
+            # tag = Tag.create_from_bytes(rawTag)
+            # rawPayload = f.read(tag.payloadSize)
 
-            crcIO, rawPayload = OskarBinaryReader.checkCRC(header.ver >= 2, rawTag, rawPayload)
-            assert crcIO, "crc wrong"
+            # crcIO, rawPayload = OskarBinaryReader.checkCRC(header.ver >= 2, rawTag, rawPayload)
+            # assert crcIO, "crc wrong"
 
-            print(header.desc)
-            print(tag.printPayloadDataType())
+            # print(header.desc)
+            # print(tag.printPayloadDataType())
            
-            payload = self.interpretePayloadData(rawPayload, tag)
+            # payload = self.interpretePayloadData(rawPayload, tag)
 
-            print(payload)
+            # print(payload)
 
 
 
