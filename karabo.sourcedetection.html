@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>karabo.sourcedetection package &mdash; Karabo-Pipeline 0.1.0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html">
+            <img src="_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Users</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="installation_user.html">Installation (User)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="container.html">Containers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/examples.html">Examples</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Developers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="development.html">Development Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation_no_conda.html">Installation without Conda</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Karabo-Pipeline</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>karabo.sourcedetection package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/karabo.sourcedetection.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="karabo-sourcedetection-package">
+<h1>karabo.sourcedetection package<a class="headerlink" href="#karabo-sourcedetection-package" title="Permalink to this heading"></a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading"></a></h2>
+</div>
+<div class="section" id="module-karabo.sourcedetection.evaluation">
+<span id="karabo-sourcedetection-evaluation-module"></span><h2>karabo.sourcedetection.evaluation module<a class="headerlink" href="#module-karabo.sourcedetection.evaluation" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="karabo.sourcedetection.evaluation.SourceDetectionEvaluation">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SourceDetectionEvaluation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">assignment</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">array</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sky</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="karabo.simulation.html#karabo.simulation.sky_model.SkyModel" title="karabo.simulation.sky_model.SkyModel"><span class="pre">SkyModel</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">source_detection</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#karabo.sourcedetection.result.SourceDetectionResult" title="karabo.sourcedetection.result.SourceDetectionResult"><span class="pre">SourceDetectionResult</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">true_positives</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">false_negatives</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">false_positives</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#karabo.sourcedetection.evaluation.SourceDetectionEvaluation" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="karabo.sourcedetection.evaluation.SourceDetectionEvaluation.automatic_assignment_of_ground_truth_and_prediction">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">automatic_assignment_of_ground_truth_and_prediction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ground_truth</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">detected</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_dist</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">top_k</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#karabo.sourcedetection.evaluation.SourceDetectionEvaluation.automatic_assignment_of_ground_truth_and_prediction" title="Permalink to this definition"></a></dt>
+<dd><p>Automatic assignment of the predicted sources <cite>predicted</cite> to the ground truth <cite>gtruth</cite>.
+The strategy is the following:
+(similar to AUTOMATIC SOURCE DETECTION IN ASTRONOMICAL IMAGES, P.61, Marc MASIAS MOYSET, 2014):</p>
+<p>Each distance between the predicted and the ground truth sources is calculated.
+Any distances &gt; <cite>max_dist</cite> are deleted.
+Assign the closest distance from the predicted and ground truth.
+Repeat the assignment, until every source from the gtruth has an assigment if possible,</p>
+<blockquote>
+<div><p>not allowing any double assignments from the predicted sources to the ground truth and vice versa.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>So each ground truth source should be assigned with a predicted source if at leas one was in range</dt><dd><p>and the predicted source assigned to another ground truth source before.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ground_truth</strong> – nx2 np.ndarray with the ground truth pixel coordinates of the catalog</p></li>
+<li><p><strong>detected</strong> – kx2 np.ndarray with the predicted pixel coordinates of the image</p></li>
+<li><p><strong>max_dist</strong> – maximal allowed distance for assignment (in pixel)</p></li>
+<li><p><strong>top_k</strong> – number of top predictions to be considered in scipy.spatial.KDTree. A small value could lead to inperfect results.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>nx3 np.ndarray where each row represents an assignment
+- first column represents the ground truth index
+- second column represents the predicted index
+- third column represents the euclidean distance between the assignment</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="karabo.sourcedetection.evaluation.SourceDetectionEvaluation.calculate_evaluation_measures">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">calculate_evaluation_measures</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">assignments</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ground_truth</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">detected</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#karabo.sourcedetection.evaluation.SourceDetectionEvaluation.calculate_evaluation_measures" title="Permalink to this definition"></a></dt>
+<dd><p>Calculates the True Positive (TP), False Positive (FP) and False Negative (FN) of the ground truth and predictions.
+- TP are the detections associated with a source
+- FP are detections without any associated source
+- FN are sources with no associations with a detection</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>assignments</strong> – nx3 did np.ndarray where each row represents an assignment
+- first column represents the ground truth index
+- second column represents the predicted index
+- third column represents the euclidean distance between the assignment</p></li>
+<li><p><strong>ground_truth</strong> – nx2 np.ndarray with the ground truth pixel coordinates of the catalog</p></li>
+<li><p><strong>detected</strong> – kx2 np.ndarray with the predicted pixel coordinates of the image</p></li>
+<li><p><strong>max_dist</strong> – maximal allowed distance for assignment</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>TP, FP, FN</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="karabo.sourcedetection.evaluation.SourceDetectionEvaluation.evaluate_result_with_sky_in_pixel_space">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">evaluate_result_with_sky_in_pixel_space</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source_detection_result</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#karabo.sourcedetection.result.SourceDetectionResult" title="karabo.sourcedetection.result.SourceDetectionResult"><span class="pre">SourceDetectionResult</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">sky</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="karabo.simulation.html#karabo.simulation.sky_model.SkyModel" title="karabo.simulation.sky_model.SkyModel"><span class="pre">SkyModel</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">distance_threshold</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filter_outliers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#karabo.sourcedetection.evaluation.SourceDetectionEvaluation.evaluate_result_with_sky_in_pixel_space" title="Permalink to this definition"></a></dt>
+<dd><p>Evaluate Result of this Source Detection Result by comparing it with a Sky Model.
+The Sky Model will be converted to Pixel space based on the dimensions of the original Image.
+Then the pixel space of the found sources and sky model sources will be compared and paired automatically.
+But only if so possible based on the</p>
+<p>The mapping uses the automatic_assignment_of_ground_truth_and_prediction() function
+and calculate_evaluation_measures() to create the evaluation</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filter_outliers</strong> – If True outliers will be filtered , defaults to False</p></li>
+<li><p><strong>source_detection_result</strong> – result that was produced with a source detection algorithm</p></li>
+<li><p><strong>sky</strong> – sky that was used to create the image</p></li>
+<li><p><strong>source_image_cell_size</strong> – cellsize in the original source image (used for mapping),
+cannot be read out from the fits file (unfortunately)</p></li>
+<li><p><strong>distance_threshold</strong> – threshold of distance between two sources,
+so that they are still considered in mathching (pixel distance).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="karabo.sourcedetection.evaluation.SourceDetectionEvaluation.get_accuracy">
+<span class="sig-name descname"><span class="pre">get_accuracy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#karabo.sourcedetection.evaluation.SourceDetectionEvaluation.get_accuracy" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="karabo.sourcedetection.evaluation.SourceDetectionEvaluation.get_confusion_matrix">
+<span class="sig-name descname"><span class="pre">get_confusion_matrix</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dtype</span><span class="p"><span class="pre">[</span></span><span class="pre">ScalarType</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#karabo.sourcedetection.evaluation.SourceDetectionEvaluation.get_confusion_matrix" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="karabo.sourcedetection.evaluation.SourceDetectionEvaluation.get_detected_array">
+<span class="sig-name descname"><span class="pre">get_detected_array</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dtype</span><span class="p"><span class="pre">[</span></span><span class="pre">ScalarType</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#karabo.sourcedetection.evaluation.SourceDetectionEvaluation.get_detected_array" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="karabo.sourcedetection.evaluation.SourceDetectionEvaluation.get_f_score">
+<span class="sig-name descname"><span class="pre">get_f_score</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#karabo.sourcedetection.evaluation.SourceDetectionEvaluation.get_f_score" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="karabo.sourcedetection.evaluation.SourceDetectionEvaluation.get_meta_data_array">
+<span class="sig-name descname"><span class="pre">get_meta_data_array</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dtype</span><span class="p"><span class="pre">[</span></span><span class="pre">ScalarType</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#karabo.sourcedetection.evaluation.SourceDetectionEvaluation.get_meta_data_array" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="karabo.sourcedetection.evaluation.SourceDetectionEvaluation.get_precision">
+<span class="sig-name descname"><span class="pre">get_precision</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#karabo.sourcedetection.evaluation.SourceDetectionEvaluation.get_precision" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="karabo.sourcedetection.evaluation.SourceDetectionEvaluation.get_sensitivity">
+<span class="sig-name descname"><span class="pre">get_sensitivity</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#karabo.sourcedetection.evaluation.SourceDetectionEvaluation.get_sensitivity" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="karabo.sourcedetection.evaluation.SourceDetectionEvaluation.get_truth_array">
+<span class="sig-name descname"><span class="pre">get_truth_array</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dtype</span><span class="p"><span class="pre">[</span></span><span class="pre">ScalarType</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#karabo.sourcedetection.evaluation.SourceDetectionEvaluation.get_truth_array" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="karabo.sourcedetection.evaluation.SourceDetectionEvaluation.plot">
+<span class="sig-name descname"><span class="pre">plot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#karabo.sourcedetection.evaluation.SourceDetectionEvaluation.plot" title="Permalink to this definition"></a></dt>
+<dd><dl class="simple">
+<dt>Plot the found sources as green x’s and the source truth as red ‘o’ on the original image,</dt><dd><p>that the source detection was performed on.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="karabo.sourcedetection.evaluation.SourceDetectionEvaluation.plot_error_ra_dec">
+<span class="sig-name descname"><span class="pre">plot_error_ra_dec</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#karabo.sourcedetection.evaluation.SourceDetectionEvaluation.plot_error_ra_dec" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="karabo.sourcedetection.evaluation.SourceDetectionEvaluation.plot_flux_histogram">
+<span class="sig-name descname"><span class="pre">plot_flux_histogram</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nbins</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#karabo.sourcedetection.evaluation.SourceDetectionEvaluation.plot_flux_histogram" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="karabo.sourcedetection.evaluation.SourceDetectionEvaluation.plot_flux_ratio_to_distance">
+<span class="sig-name descname"><span class="pre">plot_flux_ratio_to_distance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#karabo.sourcedetection.evaluation.SourceDetectionEvaluation.plot_flux_ratio_to_distance" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="karabo.sourcedetection.evaluation.SourceDetectionEvaluation.plot_flux_ratio_to_ra_dec">
+<span class="sig-name descname"><span class="pre">plot_flux_ratio_to_ra_dec</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#karabo.sourcedetection.evaluation.SourceDetectionEvaluation.plot_flux_ratio_to_ra_dec" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="karabo.sourcedetection.evaluation.SourceDetectionEvaluation.plot_quiver_positions">
+<span class="sig-name descname"><span class="pre">plot_quiver_positions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#karabo.sourcedetection.evaluation.SourceDetectionEvaluation.plot_quiver_positions" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-karabo.sourcedetection.result">
+<span id="karabo-sourcedetection-result-module"></span><h2>karabo.sourcedetection.result module<a class="headerlink" href="#module-karabo.sourcedetection.result" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="karabo.sourcedetection.result.PyBDSFSourceDetectionResult">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">PyBDSFSourceDetectionResult</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bdsf_detection:</span> <span class="pre">&lt;module</span> <span class="pre">'bdsf.image'</span> <span class="pre">from</span> <span class="pre">'/usr/share/miniconda/envs/karabo_dev_env/lib/python3.9/site-packages/bdsf/image.py'&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#karabo.sourcedetection.result.PyBDSFSourceDetectionResult" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#karabo.sourcedetection.result.SourceDetectionResult" title="karabo.sourcedetection.result.SourceDetectionResult"><code class="xref py py-class docutils literal notranslate"><span class="pre">SourceDetectionResult</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="karabo.sourcedetection.result.PyBDSFSourceDetectionResult.get_RMS_map_image">
+<span class="sig-name descname"><span class="pre">get_RMS_map_image</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="karabo.imaging.html#karabo.imaging.image.Image" title="karabo.imaging.image.Image"><span class="pre">Image</span></a></span></span><a class="headerlink" href="#karabo.sourcedetection.result.PyBDSFSourceDetectionResult.get_RMS_map_image" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="karabo.sourcedetection.result.PyBDSFSourceDetectionResult.get_gaussian_model_image">
+<span class="sig-name descname"><span class="pre">get_gaussian_model_image</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="karabo.imaging.html#karabo.imaging.image.Image" title="karabo.imaging.image.Image"><span class="pre">Image</span></a></span></span><a class="headerlink" href="#karabo.sourcedetection.result.PyBDSFSourceDetectionResult.get_gaussian_model_image" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="karabo.sourcedetection.result.PyBDSFSourceDetectionResult.get_gaussian_residual_image">
+<span class="sig-name descname"><span class="pre">get_gaussian_residual_image</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="karabo.imaging.html#karabo.imaging.image.Image" title="karabo.imaging.image.Image"><span class="pre">Image</span></a></span></span><a class="headerlink" href="#karabo.sourcedetection.result.PyBDSFSourceDetectionResult.get_gaussian_residual_image" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="karabo.sourcedetection.result.PyBDSFSourceDetectionResult.get_island_mask">
+<span class="sig-name descname"><span class="pre">get_island_mask</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="karabo.imaging.html#karabo.imaging.image.Image" title="karabo.imaging.image.Image"><span class="pre">Image</span></a></span></span><a class="headerlink" href="#karabo.sourcedetection.result.PyBDSFSourceDetectionResult.get_island_mask" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="karabo.sourcedetection.result.PyBDSFSourceDetectionResult.get_major_axis_FWHM_variation_image">
+<span class="sig-name descname"><span class="pre">get_major_axis_FWHM_variation_image</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="karabo.imaging.html#karabo.imaging.image.Image" title="karabo.imaging.image.Image"><span class="pre">Image</span></a></span></span><a class="headerlink" href="#karabo.sourcedetection.result.PyBDSFSourceDetectionResult.get_major_axis_FWHM_variation_image" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="karabo.sourcedetection.result.PyBDSFSourceDetectionResult.get_mean_map_image">
+<span class="sig-name descname"><span class="pre">get_mean_map_image</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="karabo.imaging.html#karabo.imaging.image.Image" title="karabo.imaging.image.Image"><span class="pre">Image</span></a></span></span><a class="headerlink" href="#karabo.sourcedetection.result.PyBDSFSourceDetectionResult.get_mean_map_image" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="karabo.sourcedetection.result.PyBDSFSourceDetectionResult.get_minor_axis_FWHM_variation_image">
+<span class="sig-name descname"><span class="pre">get_minor_axis_FWHM_variation_image</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="karabo.imaging.html#karabo.imaging.image.Image" title="karabo.imaging.image.Image"><span class="pre">Image</span></a></span></span><a class="headerlink" href="#karabo.sourcedetection.result.PyBDSFSourceDetectionResult.get_minor_axis_FWHM_variation_image" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="karabo.sourcedetection.result.PyBDSFSourceDetectionResult.get_peak_to_aperture_flux_variation_image">
+<span class="sig-name descname"><span class="pre">get_peak_to_aperture_flux_variation_image</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="karabo.imaging.html#karabo.imaging.image.Image" title="karabo.imaging.image.Image"><span class="pre">Image</span></a></span></span><a class="headerlink" href="#karabo.sourcedetection.result.PyBDSFSourceDetectionResult.get_peak_to_aperture_flux_variation_image" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="karabo.sourcedetection.result.PyBDSFSourceDetectionResult.get_peak_to_total_flux_variation_image">
+<span class="sig-name descname"><span class="pre">get_peak_to_total_flux_variation_image</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="karabo.imaging.html#karabo.imaging.image.Image" title="karabo.imaging.image.Image"><span class="pre">Image</span></a></span></span><a class="headerlink" href="#karabo.sourcedetection.result.PyBDSFSourceDetectionResult.get_peak_to_total_flux_variation_image" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="karabo.sourcedetection.result.PyBDSFSourceDetectionResult.get_polarized_intensity_image">
+<span class="sig-name descname"><span class="pre">get_polarized_intensity_image</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#karabo.sourcedetection.result.PyBDSFSourceDetectionResult.get_polarized_intensity_image" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="karabo.sourcedetection.result.PyBDSFSourceDetectionResult.get_position_angle_variation_image">
+<span class="sig-name descname"><span class="pre">get_position_angle_variation_image</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="karabo.imaging.html#karabo.imaging.image.Image" title="karabo.imaging.image.Image"><span class="pre">Image</span></a></span></span><a class="headerlink" href="#karabo.sourcedetection.result.PyBDSFSourceDetectionResult.get_position_angle_variation_image" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="karabo.sourcedetection.result.PyBDSFSourceDetectionResult.get_shapelet_model_image">
+<span class="sig-name descname"><span class="pre">get_shapelet_model_image</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="karabo.imaging.html#karabo.imaging.image.Image" title="karabo.imaging.image.Image"><span class="pre">Image</span></a></span></span><a class="headerlink" href="#karabo.sourcedetection.result.PyBDSFSourceDetectionResult.get_shapelet_model_image" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="karabo.sourcedetection.result.PyBDSFSourceDetectionResult.get_shapelet_residual_image">
+<span class="sig-name descname"><span class="pre">get_shapelet_residual_image</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="karabo.imaging.html#karabo.imaging.image.Image" title="karabo.imaging.image.Image"><span class="pre">Image</span></a></span></span><a class="headerlink" href="#karabo.sourcedetection.result.PyBDSFSourceDetectionResult.get_shapelet_residual_image" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="karabo.sourcedetection.result.SourceDetectionResult">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SourceDetectionResult</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">detected_sources</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source_image</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="karabo.imaging.html#karabo.imaging.image.Image" title="karabo.imaging.image.Image"><span class="pre">Image</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#karabo.sourcedetection.result.SourceDetectionResult" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="karabo.html#karabo.resource.KaraboResource" title="karabo.resource.KaraboResource"><code class="xref py py-class docutils literal notranslate"><span class="pre">KaraboResource</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="karabo.sourcedetection.result.SourceDetectionResult.detect_sources_in_image">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">detect_sources_in_image</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="karabo.imaging.html#karabo.imaging.image.Image" title="karabo.imaging.image.Image"><span class="pre">Image</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">beam</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quiet</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">any</span></span></span><a class="headerlink" href="#karabo.sourcedetection.result.SourceDetectionResult.detect_sources_in_image" title="Permalink to this definition"></a></dt>
+<dd><p>Detecting sources in an image. The Source detection is implemented with the PyBDSF.process_image function.
+See <a class="reference external" href="https://www.astron.nl/citt/pybdsf/process_image.html">https://www.astron.nl/citt/pybdsf/process_image.html</a> for more information.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>image</strong> – Image to perform source detection on</p></li>
+<li><p><strong>beam</strong> – FWHM of restoring beam. Specify as (maj, min. pos angle E of N).
+None means it will try to be extracted from the Image data. (Might fail)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Source Detection Result containing the found sources</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="karabo.sourcedetection.result.SourceDetectionResult.get_pixel_position_of_sources">
+<span class="sig-name descname"><span class="pre">get_pixel_position_of_sources</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#karabo.sourcedetection.result.SourceDetectionResult.get_pixel_position_of_sources" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="karabo.sourcedetection.result.SourceDetectionResult.get_source_image">
+<span class="sig-name descname"><span class="pre">get_source_image</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="karabo.imaging.html#karabo.imaging.image.Image" title="karabo.imaging.image.Image"><span class="pre">Image</span></a></span></span><a class="headerlink" href="#karabo.sourcedetection.result.SourceDetectionResult.get_source_image" title="Permalink to this definition"></a></dt>
+<dd><p>Return the source image, where the source detection was performed on.
+:return: Karabo Image or None (if not supplied)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="karabo.sourcedetection.result.SourceDetectionResult.has_source_image">
+<span class="sig-name descname"><span class="pre">has_source_image</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#karabo.sourcedetection.result.SourceDetectionResult.has_source_image" title="Permalink to this definition"></a></dt>
+<dd><p>Check if source image is present.
+:return: True if present, False if not present</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="karabo.sourcedetection.result.SourceDetectionResult.read_from_file">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">read_from_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">any</span></span></span><a class="headerlink" href="#karabo.sourcedetection.result.SourceDetectionResult.read_from_file" title="Permalink to this definition"></a></dt>
+<dd><p>Read the specified resource from disk into Karabo. (format specified by resource itself)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="karabo.sourcedetection.result.SourceDetectionResult.write_to_file">
+<span class="sig-name descname"><span class="pre">write_to_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#karabo.sourcedetection.result.SourceDetectionResult.write_to_file" title="Permalink to this definition"></a></dt>
+<dd><p>Save Source Detection Result to ZIP Archive containing the .fits source image and source-finding catalog.
+:param path: path to save the zip archive as.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-karabo.sourcedetection">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-karabo.sourcedetection" title="Permalink to this heading"></a></h2>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, i4ds.
+      <span class="lastupdated">Last updated on Sep 09, 2022.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+karabo.imaging package
+======================
+
+Submodules
+----------
+
+karabo.imaging.image module
+---------------------------
+
+.. automodule:: karabo.imaging.image
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+karabo.imaging.imager module
+----------------------------
+
+.. automodule:: karabo.imaging.imager
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: karabo.imaging
+   :members:
+   :undoc-members:
+   :show-inheritance:

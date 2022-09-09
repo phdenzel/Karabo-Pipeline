@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Development Documentation &mdash; Karabo-Pipeline 0.1.0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Installation without Conda" href="installation_no_conda.html" />
+    <link rel="prev" title="Examples" href="examples/examples.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html">
+            <img src="_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Users</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="installation_user.html">Installation (User)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="container.html">Containers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/examples.html">Examples</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Developers</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Development Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#setup-local-dev-environment">Setup local dev environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#update-documentation">Update documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#update-tests">Update Tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#create-a-release">Create a Release</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="installation_no_conda.html">Installation without Conda</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Karabo-Pipeline</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Development Documentation</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/development.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="development-documentation">
+<h1>Development Documentation<a class="headerlink" href="#development-documentation" title="Permalink to this heading"></a></h1>
+<div class="section" id="setup-local-dev-environment">
+<h2>Setup local dev environment<a class="headerlink" href="#setup-local-dev-environment" title="Permalink to this heading"></a></h2>
+<p>First clone the code via git.
+Then create a local development environment with the provided <code class="docutils literal notranslate"><span class="pre">environment-dev.yaml</span></code> file.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>conda env create -f environment-dev.yaml
+</pre></div>
+</div>
+<p>With this only the dependencies but not the current version of karabo will be installed into a conda environment.
+Then you can simply run your code inside that environment. To tell Python to treat the reposity as a package, the following links can be helpful:</p>
+<p><a class="reference external" href="https://www.jetbrains.com/help/pycharm/conda-support-creating-conda-virtual-environment.html">Setup Python Interpreter in PyCharm</a>.
+<a class="reference external" href="https://github.com/conda/conda-build/issues/1992">how to use conda develop?</a></p>
+</div>
+<div class="section" id="update-documentation">
+<h2>Update documentation<a class="headerlink" href="#update-documentation" title="Permalink to this heading"></a></h2>
+<p>The docs are built from the python source code and other doc source files located in /doc/src.
+The .rst and .md files need to be referenced somehow inside of index.rst or an already referenced page inside of index.rst to be viewable by the public upon building the documentation</p>
+<p>If you want to add any sort of extra text like examples or other sort of documentation do this by adding a new .md file or .rst file inside of the /doc/src folder.
+Then write your text and then add the new file to index.rst in the topmost toctree.</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="gh">Welcome to Karabo-Pipeline&#39;s documentation!</span>
+<span class="gh">===========================================</span>
+
+<span class="p">..</span> <span class="ow">toctree</span><span class="p">::</span>
+   <span class="nc">:maxdepth:</span> 2
+   <span class="nc">:caption:</span> Contents:
+
+   Installation
+   Container
+   modules
+   examples/Examples.md
+   --&gt; ADD THE REFERENCE TO YOUR FILE HERE
+</pre></div>
+</div>
+<p>Also subfiles can also point to other files like the file type defines.
+So an md file can reference like <code class="docutils literal notranslate"><span class="pre">[some</span> <span class="pre">file](path/to/some/file)</span></code>.</p>
+<p>When adding new submodules or modules. You need to update the modules.rst file accordingly and add new files similiar to the karabo.simulation.rst. To enable the automatic generation of the documentation via the python docstrings.
+There is also the command <code class="docutils literal notranslate"><span class="pre">sphinx-apidoc</span></code> from sphinx (our doc engine), that can automate this.</p>
+<p>If you want to work this sphinx locally on your machine, for example to use this sphinx-apidoc command. Thus, use the following commands to generate the documentation:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>conda install -c conda-forge -y --file doc/doc_packages.txt
+make html
+</pre></div>
+</div>
+</div>
+<div class="section" id="update-tests">
+<h2>Update Tests<a class="headerlink" href="#update-tests" title="Permalink to this heading"></a></h2>
+<p>We use the basic <code class="docutils literal notranslate"><span class="pre">unittest</span></code> python package (<a class="reference external" href="https://docs.python.org/3/library/unittest.html">unittest docs</a>).
+The unit tests are run automatically on every push.
+To add a new test simply go to the karabo/test folder.
+Add a new file for a new set of tests in this shape.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">TestSimulation</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">someTest</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># run some code that tests some functionality</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">someFunction</span><span class="p">()</span>
+        <span class="c1"># use the assertion functions on self</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEquals</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Add tests for when you write some sort of new code that you feel like might break.</p>
+<p>TIP:
+If you validate your code manually, consider just writing a method in a test class instead of opening a jupyter notebook and writing a new cell or a terminal window where you would execute the code you want to test.</p>
+</div>
+<div class="section" id="create-a-release">
+<h2>Create a Release<a class="headerlink" href="#create-a-release" title="Permalink to this heading"></a></h2>
+<p>When everything is merged which should be merged, a new Release can be deployed on <code class="docutils literal notranslate"><span class="pre">conda-forge</span></code> as following:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/i4Ds/Karabo-Pipeline/releases">Karabo-Pipline | Releases</a></p></li>
+<li><p>Click on <code class="docutils literal notranslate"><span class="pre">Draft</span> <span class="pre">a</span> <span class="pre">new</span> <span class="pre">release</span></code></p></li>
+<li><p>Define a Version by clicking <code class="docutils literal notranslate"><span class="pre">Choose</span> <span class="pre">a</span> <span class="pre">tag</span></code>. Currently we increment the second number by 1.</p></li>
+<li><p>Update <code class="docutils literal notranslate"><span class="pre">_version.txt</span></code></p></li>
+<li><p>Check that the <code class="docutils literal notranslate"><span class="pre">Target</span></code> is set to <code class="docutils literal notranslate"><span class="pre">main</span></code>.</p></li>
+<li><p>Describe the release (get inspired by the previous releases).</p></li>
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">Publish</span> <span class="pre">release</span></code>.</p></li>
+<li><p>Check on <a class="reference external" href="https://github.com/i4Ds/Karabo-Pipeline/actions">Karabo-Pipeline | Github Actions</a> that the release is succesful.</p></li>
+<li><p>Check that the new version is on <a class="reference external" href="https://anaconda.org/i4ds/karabo-pipeline">Anaconda.org | Packages</a></p></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="examples/examples.html" class="btn btn-neutral float-left" title="Examples" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="installation_no_conda.html" class="btn btn-neutral float-right" title="Installation without Conda" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, i4ds.
+      <span class="lastupdated">Last updated on Sep 09, 2022.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

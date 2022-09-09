@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>karabo.util package &mdash; Karabo-Pipeline 0.1.0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html">
+            <img src="_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Users</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="installation_user.html">Installation (User)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="container.html">Containers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/examples.html">Examples</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Developers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="development.html">Development Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation_no_conda.html">Installation without Conda</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Karabo-Pipeline</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>karabo.util package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/karabo.util.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="karabo-util-package">
+<h1>karabo.util package<a class="headerlink" href="#karabo-util-package" title="Permalink to this heading"></a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading"></a></h2>
+</div>
+<div class="section" id="module-karabo.util.FileHandle">
+<span id="karabo-util-filehandle-module"></span><h2>karabo.util.FileHandle module<a class="headerlink" href="#module-karabo.util.FileHandle" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="karabo.util.FileHandle.FileHandle">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">FileHandle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">existing_file_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_dir</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'rt'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">suffix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#karabo.util.FileHandle.FileHandle" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="karabo.util.FileHandle.FileHandle.path">
+<span class="sig-name descname"><span class="pre">path</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#karabo.util.FileHandle.FileHandle.path" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="karabo-util-config-util-module">
+<h2>karabo.util.config_util module<a class="headerlink" href="#karabo-util-config-util-module" title="Permalink to this heading"></a></h2>
+</div>
+<div class="section" id="module-karabo.util.dask">
+<span id="karabo-util-dask-module"></span><h2>karabo.util.dask module<a class="headerlink" href="#module-karabo.util.dask" title="Permalink to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="karabo.util.dask.get_global_client">
+<span class="sig-name descname"><span class="pre">get_global_client</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">min_ram_gb_per_worker</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">4</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#karabo.util.dask.get_global_client" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="karabo.util.dask.get_local_dask_client">
+<span class="sig-name descname"><span class="pre">get_local_dask_client</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">min_ram_gb_per_worker</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">4</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Client</span></span></span><a class="headerlink" href="#karabo.util.dask.get_local_dask_client" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="karabo.util.dask.parallel_for">
+<span class="sig-name descname"><span class="pre">parallel_for</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">function</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#karabo.util.dask.parallel_for" title="Permalink to this definition"></a></dt>
+<dd><p>Execute a function <code class="docutils literal notranslate"><span class="pre">n</span></code> times in parallel with DASK.</p>
+<p>For example creating many simulations at once for running in parallel:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># we pass telescope as we want to use the same in every simulation, and so we only need to setup one.</span>
+<span class="c1"># pass flux so we can use a different one in each iteration.</span>
+<span class="k">def</span> <span class="nf">my_simulation_code</span><span class="p">(</span><span class="n">telescope</span><span class="p">,</span> <span class="n">flux</span><span class="p">):</span>
+    <span class="c1"># setup simulation settings and observation settings</span>
+    <span class="n">simulation</span> <span class="o">=</span> <span class="n">InterferometerSimulation</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+    <span class="n">observation</span> <span class="o">=</span> <span class="n">Observation</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+    <span class="n">sky</span> <span class="o">=</span> <span class="n">SkyModel</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">20</span><span class="p">,</span> <span class="o">-</span><span class="mi">30</span><span class="p">,</span> <span class="n">flux</span><span class="p">]]))</span>
+    <span class="n">sim_result</span> <span class="o">=</span> <span class="n">simulation</span><span class="o">.</span><span class="n">run_simulation</span><span class="p">(</span><span class="n">telescope</span><span class="p">,</span> <span class="n">sky</span><span class="p">,</span> <span class="n">observation</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">sim_result</span>
+
+<span class="n">flux</span> <span class="o">=</span> <span class="mf">0.001</span>
+<span class="n">telescope</span> <span class="o">=</span> <span class="n">get_ASKAP_telescope</span><span class="p">()</span>
+<span class="n">results</span> <span class="o">=</span> <span class="n">parallel_for</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="c1"># how many iterations the loop will do.</span>
+    <span class="n">my_simluation_code</span><span class="p">,</span> <span class="c1"># code to execute 10 times</span>
+    <span class="n">telescope</span><span class="p">,</span> <span class="c1"># param 1 for passed function</span>
+    <span class="n">flux</span> <span class="o">+</span> <span class="n">flux</span> <span class="o">+</span> <span class="mf">0.001</span><span class="p">)</span> <span class="c1"># param 2 for passed function</span>
+<span class="c1"># Start compute to actually start the computation.</span>
+<span class="n">results</span> <span class="o">=</span> <span class="n">compute</span><span class="p">(</span><span class="o">*</span><span class="n">results</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>n</strong> – number of iterations</p></li>
+<li><p><strong>function</strong> – function to execute n times</p></li>
+<li><p><strong>args</strong> – arguments that will be passed to the passed function</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>list of delayed objects. that need to be calculated with dask.compute() later</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="karabo.util.dask.parallel_for_each">
+<span class="sig-name descname"><span class="pre">parallel_for_each</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">arr:</span> <span class="pre">[&lt;built-in</span> <span class="pre">function</span> <span class="pre">any&gt;],</span> <span class="pre">function:</span> <span class="pre">~typing.Callable,</span> <span class="pre">*args</span></em><span class="sig-paren">)</span><a class="headerlink" href="#karabo.util.dask.parallel_for_each" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>arr</strong> – </p></li>
+<li><p><strong>function</strong> – </p></li>
+<li><p><strong>args</strong> – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-karabo.util.data_util">
+<span id="karabo-util-data-util-module"></span><h2>karabo.util.data_util module<a class="headerlink" href="#module-karabo.util.data_util" title="Permalink to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="karabo.util.data_util.full_getter">
+<span class="sig-name descname"><span class="pre">full_getter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#karabo.util.data_util.full_getter" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="karabo.util.data_util.full_setter">
+<span class="sig-name descname"><span class="pre">full_setter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">state</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#karabo.util.data_util.full_setter" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="karabo.util.data_util.get_module_absolute_path">
+<span class="sig-name descname"><span class="pre">get_module_absolute_path</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#karabo.util.data_util.get_module_absolute_path" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="karabo.util.data_util.get_module_path_of_module">
+<span class="sig-name descname"><span class="pre">get_module_path_of_module</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">module</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#karabo.util.data_util.get_module_path_of_module" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="karabo.util.data_util.read_CSV_to_ndarray">
+<span class="sig-name descname"><span class="pre">read_CSV_to_ndarray</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#karabo.util.data_util.read_CSV_to_ndarray" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-karabo.util.hdf5_util">
+<span id="karabo-util-hdf5-util-module"></span><h2>karabo.util.hdf5_util module<a class="headerlink" href="#module-karabo.util.hdf5_util" title="Permalink to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="karabo.util.hdf5_util.convert_healpix_2_radec">
+<span class="sig-name descname"><span class="pre">convert_healpix_2_radec</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arr</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#karabo.util.hdf5_util.convert_healpix_2_radec" title="Permalink to this definition"></a></dt>
+<dd><p>Convert array from healpix to 2-D array of RADEC
+:param arr:
+:return: RADEC in degrees</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="karabo.util.hdf5_util.get_healpix_image">
+<span class="sig-name descname"><span class="pre">get_healpix_image</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hdffile</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#karabo.util.hdf5_util.get_healpix_image" title="Permalink to this definition"></a></dt>
+<dd><p>Get index maps, maps and frequency from HDF5 file</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="karabo.util.hdf5_util.get_vis_from_hdf5">
+<span class="sig-name descname"><span class="pre">get_vis_from_hdf5</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hdffile</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#karabo.util.hdf5_util.get_vis_from_hdf5" title="Permalink to this definition"></a></dt>
+<dd><p>Get index maps, maps and frequency from HDF5 file</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="karabo.util.hdf5_util.h5_diter">
+<span class="sig-name descname"><span class="pre">h5_diter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">g</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#karabo.util.hdf5_util.h5_diter" title="Permalink to this definition"></a></dt>
+<dd><p>Get the data elements from the hdf5 datasets and groups
+Input: HDF5 file
+Output: Items and its path of data elements</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="karabo.util.hdf5_util.print_hd5_object_and_keys">
+<span class="sig-name descname"><span class="pre">print_hd5_object_and_keys</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hdffile</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#karabo.util.hdf5_util.print_hd5_object_and_keys" title="Permalink to this definition"></a></dt>
+<dd><p>Read HDF5 file
+Returns: HDF Object, relavent keys</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-karabo.util.jupyter">
+<span id="karabo-util-jupyter-module"></span><h2>karabo.util.jupyter module<a class="headerlink" href="#module-karabo.util.jupyter" title="Permalink to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="karabo.util.jupyter.isNotebook">
+<span class="sig-name descname"><span class="pre">isNotebook</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#karabo.util.jupyter.isNotebook" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="karabo.util.jupyter.set_rascil_data_directory_env">
+<span class="sig-name descname"><span class="pre">set_rascil_data_directory_env</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#karabo.util.jupyter.set_rascil_data_directory_env" title="Permalink to this definition"></a></dt>
+<dd><p>Sets specific environment variables that the jupyter kernel is not loading by default.</p>
+<p>This function is idempotent (running it more than once brings no side effects).</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-karabo.util.math_util">
+<span id="karabo-util-math-util-module"></span><h2>karabo.util.math_util module<a class="headerlink" href="#module-karabo.util.math_util" title="Permalink to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="karabo.util.math_util.cartesian_to_ll">
+<span class="sig-name descname"><span class="pre">cartesian_to_ll</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#karabo.util.math_util.cartesian_to_ll" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="karabo.util.math_util.euclidean_distance">
+<span class="sig-name descname"><span class="pre">euclidean_distance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#karabo.util.math_util.euclidean_distance" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="karabo.util.math_util.get_poisson_disk_sky">
+<span class="sig-name descname"><span class="pre">get_poisson_disk_sky</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">min_size:</span> <span class="pre">(&lt;class</span> <span class="pre">'float'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">&lt;class</span> <span class="pre">'float'&gt;)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_size:</span> <span class="pre">(&lt;class</span> <span class="pre">'float'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">&lt;class</span> <span class="pre">'float'&gt;)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flux_min:</span> <span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flux_max:</span> <span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r=10</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#karabo.util.math_util.get_poisson_disk_sky" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="karabo.util.math_util.long_lat_to_cartesian">
+<span class="sig-name descname"><span class="pre">long_lat_to_cartesian</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lon</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#karabo.util.math_util.long_lat_to_cartesian" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="karabo.util.math_util.poisson_disc_samples">
+<span class="sig-name descname"><span class="pre">poisson_disc_samples</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">width</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">height</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k=5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">distance=&lt;function</span> <span class="pre">euclidean_distance&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random=&lt;built-in</span> <span class="pre">method</span> <span class="pre">random</span> <span class="pre">of</span> <span class="pre">Random</span> <span class="pre">object&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#karabo.util.math_util.poisson_disc_samples" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="karabo.util.math_util.random">
+<span class="sig-name descname"><span class="pre">random</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">x</span> <span class="pre">in</span> <span class="pre">the</span> <span class="pre">interval</span> <span class="pre">[0,</span> <span class="pre">1).</span></span></span><a class="headerlink" href="#karabo.util.math_util.random" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-karabo.util.plotting_util">
+<span id="karabo-util-plotting-util-module"></span><h2>karabo.util.plotting_util module<a class="headerlink" href="#module-karabo.util.plotting_util" title="Permalink to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="karabo.util.plotting_util.get_slices">
+<span class="sig-name descname"><span class="pre">get_slices</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wcs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">WCS</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#karabo.util.plotting_util.get_slices" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-karabo.util">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-karabo.util" title="Permalink to this heading"></a></h2>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, i4ds.
+      <span class="lastupdated">Last updated on Sep 09, 2022.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
